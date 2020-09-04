@@ -33,7 +33,7 @@
 3.更新阶段钩子函数
     (1)getDerivedStateFromProps
 
-    (2)shouldComponentUpadate(询问组件是否更新)
+    (2)shouldComponentUpadate(询问组件是否更新)(类组建中提升性能)
         可以用返回的true或者false来提升代码性能，减少render的执行次数
         根据外部传入的属性或者内部的状态进行判断，满足某个状态下采取执行render渲染
         内部通过this.props.flag获取的是之前的flag参数，如果想要获取最新的就从参数里获取
@@ -44,8 +44,12 @@
             引用类型：根据外部传入数据，新的数据和旧的数据的地址是否一致，如果一致，render也不会执行
             优点：不需要开发者自己实现shouldComponentUpdate，就可以简单的判断来提升性能
             缺点：对于引用类型的数据，必须保证地址不一样，否则界面不会更新
+        
+        函数组件里提高代码性能
+            React.memo()
+
     (3)render
     
-    (4)getSnapshotBeforeUpdate
-   
+    (4)getSnapshotBeforeUpdate(快照)
+    
     (5)componentDidUpdata
