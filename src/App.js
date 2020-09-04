@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import One from "./One"
+// import One from "./One"
+import Two from "./Two"
 export default class App extends Component {
   state={
     list:[
@@ -25,7 +26,8 @@ export default class App extends Component {
         <ul>
           {
            list.map(item =>{
-             return <One key={item.id} flag={item.flag} item={item} handleChange ={this.handleChange}/>
+            //  return <One key={item.id} flag={item.flag} item={item} handleChange ={this.handleChange}/>
+             return <Two key={item.id} flag={item.flag} item={item} handleChange ={this.handleChange}/>
            })
           }
         </ul>
